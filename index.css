@@ -1,0 +1,134 @@
+body {
+    background-color: #e5e5e5;
+}
+
+.banner {
+    width: 100%;
+    height: 300px;
+    background: url('img/baza.png') center/cover no-repeat;
+}
+
+.container-fluid {
+    background-color: #f4f4f4;
+}
+
+img {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    max-width: 300px;
+}
+
+
+
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+@font-face {
+    font-family: 'Neue Haas Grotesk';
+    src: url('fonts/NeueHaasGrotesk-Regular.woff2') format('woff2'),
+        url('fonts/NeueHaasGrotesk-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue Haas Grotesk';
+    src: url('fonts/NeueHaasGrotesk-Bold.woff2') format('woff2'),
+        url('fonts/NeueHaasGrotesk-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+
+/* Стили для бургер-меню */
+.burger-checkbox {
+    position: absolute;
+    visibility: hidden;
+}
+
+.burger {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    width: 35px;
+    height: 25px;
+    z-index: 1;
+}
+
+.burger span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    /* Цвет линий бургер-меню */
+    border-radius: 4px;
+    transition: transform 0.3s, top 0.3s, bottom 0.3s;
+}
+
+.burger span:nth-child(1) {
+    top: 0;
+}
+
+.burger span:nth-child(2) {
+    top: 10px;
+}
+
+.burger span:nth-child(3) {
+    top: 20px;
+}
+
+/* Когда чекбокс активен (бургер меню открыто) */
+.burger-checkbox:checked+.burger span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 10px;
+}
+
+.burger-checkbox:checked+.burger span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-checkbox:checked+.burger span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 10px;
+}
+
+/* Меню, которое появляется при активном бургер-меню */
+#menu-list {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100%;
+    background-color: #D6E9FF;
+    /* Измените этот цвет на нужный вам */
+    padding-top: 60px;
+    z-index: 1000;
+    transition: left 0.3s ease-in-out;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Когда чекбокс активирован, меню выезжает */
+.burger-checkbox:checked~#menu-list {
+    display: flex;
+    left: 0;
+}
+
+/* Опционально: если вы хотите изменить цвет фона бургер-меню в момент открытия */
+.burger-checkbox:checked~.burger {
+    background-color: #f0f0f0;
+    /* Здесь можете выбрать подходящий цвет */
+}
+
+.navbar-brand {
+    font-size: 32px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
