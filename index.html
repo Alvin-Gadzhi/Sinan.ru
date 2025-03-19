@@ -24,9 +24,6 @@
                 <ul class="navbar-nav ms-auto list-inline">
                     <li class="list-inline-item"><a class="nav-link" href="#home">Главная</a></li>
                     <li class="list-inline-item"><a class="nav-link" href="#catalog">Каталог</a></li>
-                    <li class="list-inline-item"><a class="nav-link" href="#women parfum">Женская парфюмерия</a></li>
-                    <li class="list-inline-item"><a class="nav-link" href="#man parfum">Мужская парфюмерия</a></li>
-                    <li class="list-inline-item"><a class="nav-link" href="#transparfum">Унисекс парфюмерия</a></li>
                     <li class="list-inline-item"><a class="nav-link" href="#abautus">О нас</a></li>
                     <li class="list-inline-item"><a class="nav-link" href="#map">Показать на карте</a></li>
                 </ul>
@@ -123,22 +120,87 @@
         <h2 class="text-muted">Journal</h2>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-3">
+                <div class="col-md-3 clickable-card" onclick="location.href='index1.html'">
                     <img src="img/рендер1.jpg" class="img-fluid rounded" alt="Journal 1">
                     <p class="text-muted">Архитектурные решения</p>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 clickable-card" onclick="location.href='index2.html'">
                     <img src="img/рендер1.jpg" class="img-fluid rounded" alt="Journal 2">
                     <p class="text-muted">Конструктивные решения</p>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 clickable-card" onclick="location.href='index3.html'">
                     <img src="img/рендер1.jpg" class="img-fluid rounded" alt="Journal 3">
-                    <p class="text-muted">Инжинерные решения</p>
+                    <p class="text-muted">Инженерные решения</p>
                 </div>
             </div>
             <button class="btn btn-outline-dark mt-3">View all posts</button>
         </div>
     </div>
+
+    <div class="container my-5">
+        <h2 class="text-center text-muted mb-4">Новости архитектуры</h2>
+        <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Новость 1 -->
+                <div class="carousel-item active">
+                    <div class="row align-items-center">
+                        <div class="col-md-4">
+                            <img src="img/рендер3.jpg" class="img-fluid rounded" alt="Современные тенденции">
+                        </div>
+                        <div class="col-md-8">
+                            <h4>Современные тенденции</h4>
+                            <p class="text-muted">
+                                Архитектурные инновации и новые технологии формируют будущее городов.
+                                Мы исследуем последние тенденции в проектировании и строительстве.
+                            </p>
+                            <a href="news1.html" class="btn btn-outline-dark btn-sm">Читать далее</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Новость 2 -->
+                <div class="carousel-item">
+                    <div class="row align-items-center">
+                        <div class="col-md-4">
+                            <img src="img/рендер2.jpg" class="img-fluid rounded" alt="Экологическая архитектура">
+                        </div>
+                        <div class="col-md-8">
+                            <h4>Экологическая архитектура</h4>
+                            <p class="text-muted">
+                                Как архитекторы интегрируют устойчивые решения в проекты? Новые методы
+                                строительства с акцентом на экологию и энергоэффективность.
+                            </p>
+                            <a href="news2.html" class="btn btn-outline-dark btn-sm">Читать далее</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Новость 3 -->
+                <div class="carousel-item">
+                    <div class="row align-items-center">
+                        <div class="col-md-4">
+                            <img src="img/рендер1.jpg" class="img-fluid rounded" alt="Исторические памятники">
+                        </div>
+                        <div class="col-md-8">
+                            <h4>Исторические памятники</h4>
+                            <p class="text-muted">
+                                Реконструкция и сохранение архитектурных шедевров прошлого. Как сохранить
+                                культурное наследие в современном мире?
+                            </p>
+                            <a href="news3.html" class="btn btn-outline-dark btn-sm">Читать далее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Элементы управления слайдером bootstrap-->
+            <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bc-red" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+
+
 
     <div class="container text-center my-5">
         <h5 class="text-muted">Subscribe to newsletter</h5>
@@ -174,6 +236,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
