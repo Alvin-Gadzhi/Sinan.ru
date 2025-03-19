@@ -66,7 +66,6 @@
         .gallery-img {
             width: 100%;
             max-width: 300px;
-            /* Чтобы картинки не были слишком большими */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
         }
@@ -85,7 +84,6 @@
         /* Стили для слайдов */
         .slide {
             flex: 0 0 calc(16.6667% - 10px);
-            /* 6 слайдов + отступ */
             margin-right: 10px;
             display: flex;
             justify-content: center;
@@ -93,11 +91,9 @@
             overflow: hidden;
         }
 
-        /* Обрезаем картинки, чтобы все были одинаковыми */
         .image-wrapper {
             width: 100%;
             height: 250px;
-            /* Фиксированная высота */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -109,7 +105,6 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            /* Растягивает изображение, сохраняя пропорции и заполняя контейнер */
             cursor: pointer;
         }
 
@@ -129,7 +124,6 @@
         .slide img {
             width: 100%;
             height: 250px;
-            /* Фиксированная высота */
             object-fit: cover;
             border-radius: 8px;
             cursor: pointer;
@@ -168,14 +162,12 @@
     <div class="banner"></div>
 
     <div class="container pt30 container p10">
-        <!-- Первая секция -->
         <div class="row justify-content-center mb-5">
             <div class="col-md-6 text-center">
                 <img src="img/рендер1.jpg" alt="Изображение 1" class="img-fluid">
             </div>
         </div>
 
-        <!-- Вторая секция -->
         <div class="row justify-content-center mb-5">
             <div class="col-md-4">
                 <img src="img/рендер2.jpg" alt="Изображение 2" class="img-fluid">
@@ -185,7 +177,6 @@
             </div>
         </div>
 
-        <!-- Третья секция с текстом -->
         <div class="row align-items-center">
             <div class="col-md-6">
                 <p>
@@ -197,7 +188,7 @@
                 <img src="img/рендер4.jpg" alt="Изображение 4" class="img-fluid">
             </div>
         </div>
-        <div class="row justify-content-center mb-5 pt50">
+        <div class="row justify-content-center mb-5 pt-5 g-3">
             <div class="col-md-4">
                 <img src="img/рендер2.jpg" alt="Изображение 2" class="img-fluid">
             </div>
@@ -205,25 +196,27 @@
                 <img src="img/рендер3.jpg" alt="Изображение 3" class="img-fluid">
             </div>
         </div>
-    </div>
 
-    <div class="container text-center mt-5">
-        <!-- Первая строка (2 изображения) -->
-        <div class="row gallery-row justify-content-center pb30">
-            <div class="col-md-3">
-                <img src="img/photo_6_2025-03-15_00-02-01.jpg" class="gallery-img br10" alt="Изображение 1">
+        <div class="container text-center mt-5">
+            <div class="row gallery-row justify-content-center pb-3 g-3">
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <img src="img/photo_6_2025-03-15_00-02-01.jpg" class="gallery-img br10 img-fluid"
+                        alt="Изображение 1">
+                </div>
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <img src="img/photo_5_2025-03-15_00-02-01.jpg" class="gallery-img br10 img-fluid"
+                        alt="Изображение 2">
+                </div>
             </div>
-            <div class="col-md-3">
-                <img src="img/photo_5_2025-03-15_00-02-01.jpg" class="gallery-img br10" alt="Изображение 2">
+
+            <div class="row gallery-row justify-content-center g-3">
+                <div class="col-md-4 col-sm-8 mb-3">
+                    <img src="img/photo_4_2025-03-15_00-02-01.jpg" class="gallery-img br10 img-fluid"
+                        alt="Изображение 3">
+                </div>
             </div>
         </div>
 
-        <!-- Вторая строка (1 изображение) -->
-        <div class="row gallery-row justify-content-center">
-            <div class="col-md-4">
-                <img src="img/photo_4_2025-03-15_00-02-01.jpg" class="gallery-img br10" alt="Изображение 3">
-            </div>
-        </div>
         <!-- Обёртка слайдера -->
         <div class="slider-container pt20">
             <div class="slider">
