@@ -1,5 +1,6 @@
 body {
     background-color: #e5e5e5;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 .banner {
@@ -20,13 +21,6 @@ img {
     max-width: 300px;
 }
 
-
-
-
-body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-}
-
 @font-face {
     font-family: 'Neue Haas Grotesk';
     src: url('fonts/NeueHaasGrotesk-Regular.woff2') format('woff2'),
@@ -42,7 +36,6 @@ body {
     font-weight: bold;
     font-style: normal;
 }
-
 
 
 
@@ -67,7 +60,6 @@ body {
     width: 100%;
     height: 4px;
     background-color: #000;
-    /* Цвет линий бургер-меню */
     border-radius: 4px;
     transition: transform 0.3s, top 0.3s, bottom 0.3s;
 }
@@ -107,7 +99,6 @@ body {
     left: -250px;
     height: 100%;
     background-color: #D6E9FF;
-    /* Измените этот цвет на нужный вам */
     padding-top: 60px;
     z-index: 1000;
     transition: left 0.3s ease-in-out;
@@ -125,10 +116,57 @@ body {
 /* Опционально: если вы хотите изменить цвет фона бургер-меню в момент открытия */
 .burger-checkbox:checked~.burger {
     background-color: #f0f0f0;
-    /* Здесь можете выбрать подходящий цвет */
 }
 
 .navbar-brand {
     font-size: 32px;
     font-family: Verdana, Geneva, Tahoma, sans-serif !important;
 }
+
+
+/*увелечине картики при наведении*/
+.clickable-card {
+    cursor: pointer;
+    transition: transform 0.4s ease-out;
+}
+
+.clickable-card img {
+    transition: transform 0.4s ease-out;
+    transform-origin: center;
+}
+
+.clickable-card:hover img {
+    transform: scale(1.08);
+}
+
+/*кнопушка домой*/
+.btn-home {
+    font-family: 'Neue Haas Grotesk', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #c7c7c7;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-home::before {
+    content: "←";
+    margin-right: 8px;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.btn-home:hover {
+    color: #545454;
+    transform: scale(1.1);
+}
+
+.btn-home:hover::before {
+    transform: translateX(-5px);
+}
+
+
