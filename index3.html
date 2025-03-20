@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Инженерные решения</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="grid.css">
+</head>
+
+<body>
+    <!-- Фоновое изображение -->
+    <div class="banner"></div>
+
+    <style>
+        .banner {
+            width: 100%;
+            height: 300px;
+            background: url('img/enginier.png') center/cover no-repeat;
+        }
+
+        .container-fluid {
+            background-color: #f4f4f4;
+        }
+
+        img {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        h1,
+        h3 {
+            font-family: 'Neue Haas Grotesk', sans-serif;
+        }
+
+        .text-muted {
+            font-size: 18px;
+        }
+
+        footer {
+            background: #f4f4f4;
+        }
+
+        .btn-home {
+            font-family: 'Neue Haas Grotesk', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #c7c7c7;
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: color 0.3s ease, transform 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .btn-home::before {
+            content: "←";
+            margin-right: 8px;
+            font-size: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-home:hover {
+            color: #545454;
+            transform: scale(1.1);
+        }
+
+        .btn-home:hover::before {
+            transform: translateX(-5px);
+        }
+
+        /* Стили для модального окна */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        /* Кнопка закрытия */
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .close:hover {
+            transform: scale(1.2);
+        }
+
+        /* Анимация появления */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+
+    <div class="container my-5">
+        <h1 class="text-center text-dark">Инженерные решения</h1>
+        <p class="text-center text-muted">Понимание технологических трендов и инженерных решений для современной
+            архитектуры</p>
+
+        <div class="row align-items-center my-5">
+            <div class="col-md-4">
+                <img src="img/e4.jpg" alt="Конструктивное решение" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-8">
+                <h3>Надежность и эстетика</h3>
+                <p class="text-muted">
+                    В основе современных инженерных решений лежат не только прочность и безопасность, но и гармония с
+                    окружающей средой. Мы используем инновационные материалы и методы, чтобы достигать идеального
+                    сочетания функциональности и эстетики.
+                </p>
+            </div>
+        </div>
+
+        <div class="row align-items-center my-5 flex-row-reverse">
+            <div class="col-md-4">
+                <img src="img/e1.jpg" alt="Инновации в строительстве" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-8">
+                <h3>Инновации в строительстве</h3>
+                <p class="text-muted">
+                    Мы применяем передовые технологии в проектировании и строительстве, которые обеспечивают высокую
+                    энергоэффективность и соответствие экологическим стандартам.
+                </p>
+            </div>
+        </div>
+
+        <div class="row align-items-center my-5">
+            <div class="col-md-4">
+                <img src="img/e2.jpg" alt="Материалы будущего" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-8">
+                <h3>Материалы будущего</h3>
+                <p class="text-muted">
+                    Использование новых композитных материалов и экологически чистых элементов позволяет нам создавать
+                    более долговечные и устойчивые конструкции.
+                </p>
+            </div>
+        </div>
+
+        <div class="row align-items-center my-5 flex-row-reverse">
+            <div class="col-md-4">
+                <img src="img/e3.jpg" alt="Инновации в строительстве" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-8">
+                <h3>Инновации в строительстве</h3>
+                <p class="text-muted">
+                    Современные методы проектирования и строительство с использованием автоматизации позволяют нам
+                    создавать здания, отвечающие самым строгим требованиям.
+                </p>
+            </div>
+        </div>
+
+        <div class="row align-items-center my-5">
+            <div class="col-md-4">
+                <img src="img/e4.jpg" alt="Материалы будущего" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-8">
+                <h3>Материалы будущего</h3>
+                <p class="text-muted">
+                    Наши проекты используют самые современные материалы, такие как сверхпрочные стекла и композитные
+                    материалы, обеспечивающие безопасность и эстетичность.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="fullImage">
+    </div>
+
+    <footer class="text-center py-4 bg-light">
+        <button class="btn-home">Домой</button>
+
+        <p class="text-muted">&copy; 2025 Sinan. Все права защищены.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('.img-fluid').forEach(img => {
+            img.addEventListener('click', function () {
+                let modal = document.getElementById("imageModal");
+                let modalImg = document.getElementById("fullImage");
+
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+            });
+        });
+
+        document.querySelector(".close").addEventListener("click", function () {
+            document.getElementById("imageModal").style.display = "none";
+        });
+
+        document.getElementById("imageModal").addEventListener("click", function (event) {
+            if (event.target === this) {
+                this.style.display = "none";
+            }
+        });
+    </script>
+    <script>// кнопушка домой
+        document.querySelector(".btn-home").addEventListener("click", function () {
+            window.location.href = "index.html";
+        });</script>
+</body>
+
+</html>
