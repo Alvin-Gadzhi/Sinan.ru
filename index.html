@@ -12,6 +12,15 @@
 </head>
 
 <body>
+    <!-- Интро-экран -->
+    <div id="intro-screen"
+        class="position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center bg-white"
+        style="z-index: 3000;">
+        <h1 class="display-4 text-dark fw-bold">
+            <span class="sinan-title">Sinan</span><br>
+            <span class="sub-title">Architectural Design Bureau</span>
+        </h1>
+    </div>
 
     <nav class="navbar navbar-expand-lg">
         <div class="container">
@@ -26,21 +35,15 @@
                 <ul class="navbar-nav ms-auto list-inline">
                     <li class="list-inline-item"><a class="nav-link" href="#home">Главная</a></li>
                     <li class="list-inline-item"><a class="nav-link" href="#catalog">Каталог</a></li>
-                    <li class="list-inline-item"><a class="nav-link" href="#abautus">О нас</a></li>
-                    <li class="list-inline-item"><a class="nav-link" href="#map">Наша команда</a></li>
+                    <li class="list-inline-item"><a class="nav-link" href="#journal">Журнал</a></li>
+                    <li class="list-inline-item"><a class="nav-link" href="#ourteam">Наша команда</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container-fluid text-center py-4">
-        <h1 class="fs-5 text-muted">
-            architectural design bureau
-        </h1>
-    </div>
-
     <!-- Фоновое изображение -->
-    <div class="banner"></div>
+    <div class="banner" id="home"></div>
 
     <!-- Контентная секция -->
     <div class="container my-5">
@@ -90,7 +93,7 @@
     </div>
 
     <div class="container-fluid bg-light py-5 text-center">
-        <h2 class="text-muted mb20">Recent Projects</h2>
+        <h2 class="text-muted mb20" id="catalog">Recent Projects</h2>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-3">
@@ -147,7 +150,7 @@
     </div>
 
     <div class="container-fluid bg-light py-5 text-center">
-        <h2 class="text-muted mb20">Journal</h2>
+        <h2 class="text-muted mb20" id="journal">Journal</h2>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-3 col-md-4 col-sm-6">
@@ -242,7 +245,7 @@
         <div class="container">
             <h3>Sinan</h3>
             <p><strong>Architectural design bureau</strong></p>
-            <p>Email: <a href="mailto:Sinan@mail.ru">Sinan@mail.ru</a></p>
+            <p>Email: <a href="mailto:sinan.company@mail.ru">sinan.company@mail.ru</a></p>
             <p>Telephone: <a href="tel:+7 964 023 5820">+7 964 023 5820</a></p>
             <p>Instagram: <a href="https://instagram.com/paulconradarchitects">Sinan</a></p>
             <p>ОГРНИП<br>325050000004700</p>
@@ -251,7 +254,7 @@
                 В Sinan мы всегда ищем креативных и увлеченных архитекторов. Если вы хотите узнать о
                 присоединении к
                 нашей команде, отправьте свое резюме по адресу
-                <a href="mailto:Sinan@mail.ru">Sinan@mail.ru</a>
+                <a href="mailto:sinan.company@mail.ru">sinan.company@mail.ru</a>
             </p>
         </div>
     </footer>
@@ -297,7 +300,33 @@
             color: #777;
             margin-top: 20px;
         }
+
+        .sinan-title {
+            font-size: 3rem;
+            /* Большой размер для "Sinan" */
+        }
+
+        .sub-title {
+            font-size: 1.5rem;
+            /* Меньший размер для "Architectural Design Bureau" */
+            opacity: 0.8;
+            /* Сделаем второй текст немного менее заметным */
+        }
     </style>
+    <script>
+        const intro = document.getElementById('intro-screen');
+
+        function hideIntro() {
+            intro.classList.add('hidden');
+            setTimeout(() => {
+                intro.style.display = 'none';
+            }, 1000);
+        }
+
+        // Убираем интро при клике или прокрутке страницы
+        window.addEventListener('scroll', hideIntro, { once: true });
+        intro.addEventListener('click', hideIntro);
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
